@@ -1,0 +1,107 @@
+/* 기본 스타일 */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e7eff6; /* 밝은 푸른색 배경 */
+}
+
+/* 추가된 스타일 */
+.branding {
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.branding:hover {
+    transform: translateY(-10px); /* 문구 위치 조정 효과 */
+}
+
+.branding:hover .tagline {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tagline {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    position: absolute;
+    top: 100%; /* 원래 문구 바로 아래에 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #fff; /* 여기서 색상을 원하는 대로 조정하세요 */
+    font-size: 1em; /* 필요에 따라 크기 조정 */
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+/* 헤더 및 네비게이션 스타일 */
+.site-header {
+    background: #005792; /* 진한 푸른색 */
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.site-header h1 {
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+    text-align: right;
+}
+
+.nav-list li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+    color: #a4ebf3; /* 밝은 푸른색 */
+}
+
+/* 메인 섹션 스타일 */
+.intro-section, .services-section, .contact-section {
+    padding: 20px 0;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px; /* 추가된 둥근 모서리 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 추가된 그림자 */
+}
+
+/* 푸터 스타일 */
+.site-footer {
+    background: #005792; /* 진한 푸른색 */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}

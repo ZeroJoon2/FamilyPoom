@@ -1,0 +1,174 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가족의 품</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        /* Tailwind CSS의 유틸리티 클래스로 여백을 조절 */
+        .py-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        /* Footer 마진 조절 */
+        footer {
+            padding-top: 0; /* 원하는 값으로 조절하세요 */
+            padding-bottom: 0; /* 원하는 값으로 조절하세요 */
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+        }
+        /* 추가된 스타일 */
+        .box {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .title {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            max-width: 400px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* 마우스 오버 효과 강조 */
+        .title:hover {
+        transform: translateY(-5px); /* 더 작은 움직임으로 변경 */
+    
+        }
+        .title:hover .tagline {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tagline {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s linear;
+            position: absolute;
+            top: 110%; /* 원래 문구 바로 아래에 위치 */
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            color: #ffffff; /* 여기서 색상을 원하는 대로 조정하세요 */
+            font-size: 1.5em; /* 필요에 따라 크기 조정 */
+        }
+
+        /* index.html 내의 <style> 태그 내에 추가 */
+        #contact {
+            margin-top: -50px; /* 기존 값보다 더 적은 값으로 조정 */
+            }
+
+        /* 간단한 펄스 애니메이션 */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+                }
+            100% {
+                box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+                }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+    
+
+
+    <video autoplay muted loop class="video-background">
+        <source src="intro2.mp4" type="video/mp4">
+        <!-- 비디오를 지원하지 않는 브라우저를 위한 대체 콘텐츠 -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container mx-auto px-4 relative">
+        <section class="text-center py-10">
+            <div class="title">
+                <h1 class="text-7xl font-bold text-white">가족의 품</h1>
+                <div class="tagline">당신과 가족에게 최선의 선택</div>
+            </div>
+        </section>
+
+        <!-- 회사 소개 섹션 -->
+        <section class="mt-10 text-white">
+            <h2 class="text-2xl font-bold text-center">우리의 서비스</h2>
+            <div class="flex flex-wrap justify-center mt-1">
+                <!-- 가족의 품 어플리케이션 서비스 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="box bg-black bg-opacity-50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <img src="logo.png" alt="가족의 품 어플리케이션 아이콘" class="w-20 h-20 mb-3">
+                        <h3 class="text-xl font-bold mb-3">가족의 품 어플리케이션</h3>
+                        <p class="mb-4">가족 간의 소통을 혁신하고 강화하는 우리의 어플리케이션, '가족의 품'을 소개합니다.</p>
+                        <a href="#" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            자세히 보기
+                        </a>
+                    </div>
+                </div>
+                <!-- 여러 서비스를 위한 추가 div 요소들... -->
+            </div>
+        </section>
+
+        <!-- 회사 소개 섹션 -->
+        <section id = "contact" class="mt-20 text-white">
+            <h2 class="mt-20 text-2xl font-bold text-center">연락처</h2>
+            <div class="flex flex-wrap justify-center mt-1">
+                <!-- 가족의 품 어플리케이션 서비스 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <div class="box bg-black bg-opacity-50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                        <img src="contact.png" alt="가족의 품 어플리케이션 아이콘" class="w-20 h-20 mb-3">
+                        <h3 class="text-xl font-bold mb-3">언제든지 연락주세요</h3>
+                        <p class="mb-4">HP : 010-5025-3486
+                            <br> E-mail : comboy823@naver.com 
+                            <br> 창업자 Website : <a href="https://main--joon2.netlify.app/" target="_blank">https://main--joon2.netlify.app/</a>
+                        </p>
+                        <a href="https://main--joon2.netlify.app/" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            창업자 웹사이트 바로가기
+                        </a>
+                    </div>
+                </div>
+                <!-- 여러 서비스를 위한 추가 div 요소들... -->
+            </div>
+        </section>
+
+        <footer class="text-center py-5 mt-10">
+            <p class="text-white">© 2024 가족의 품. 모든 권리 보유.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script>   
+
+
+
+
+
+
+
+
+</script>
